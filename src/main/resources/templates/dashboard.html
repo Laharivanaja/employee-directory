@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+    <h1>Employee Directory</h1>
+
+    <!-- ✅ Search, Sort & Filter -->
+    <div class="controls">
+        <input type="text" id="search-input" placeholder="Search by name or email..."/>
+        
+        <select id="sort-select">
+            <option value="">Sort by</option>
+            <option value="firstName">First Name (A-Z)</option>
+            <option value="department">Department (A-Z)</option>
+        </select>
+
+        <button id="filter-btn" class="filter-button">Filter Employees</button>
+    </div>
+
+    <!-- ✅ Filter Sidebar -->
+    <div id="filter-sidebar" class="hidden">
+        <h3>Filter Employees</h3>
+        <label>
+            Department:
+            <input type="text" id="filter-department" placeholder="e.g. IT"/>
+        </label>
+        <br><br>
+        <label>
+            Role:
+            <input type="text" id="filter-role" placeholder="e.g. Manager"/>
+        </label>
+        <br><br>
+        <button id="apply-filter-btn" class="apply-button">Apply Filter</button>
+        <button id="close-filter-btn" class="cancel-button">Close</button>
+    </div>
+
+    <!-- ✅ Add Employee Button -->
+    <button id="add-employee-btn" class="add-button">+ Add Employee</button>
+
+    <!-- ✅ Add/Edit Employee Form -->
+    <div id="employee-form-container" class="hidden">
+        <h3 id="form-title">Add Employee</h3>
+        <form id="employee-form">
+            <input type="hidden" id="employee-id"/>
+
+            <label>First Name: <input type="text" id="first-name" required /></label><br>
+            <label>Last Name: <input type="text" id="last-name" required /></label><br>
+            <label>Email: <input type="email" id="email" required /></label><br>
+            <label>Department: <input type="text" id="department" required /></label><br>
+            <label>Role: <input type="text" id="role" required /></label><br>
+            
+            <button type="submit" class="save-button">Save</button>
+            <button type="button" id="cancel-btn" class="cancel-button">Cancel</button>
+        </form>
+    </div>
+
+    <!-- ✅ Employee List -->
+    <div id="employee-list-container"></div>
+
+    <!-- ✅ Pagination -->
+    <div class="pagination">
+        <select id="items-per-page">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <div id="pagination-controls"></div>
+    </div>
+
+    <script src="../static/js/data.js"></script>
+    <script src="../static/js/app.js"></script>
+</body>
+</html>
