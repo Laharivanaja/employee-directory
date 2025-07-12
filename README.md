@@ -1,64 +1,93 @@
-# Employee Directory Web Interface
+# Employee Directory Web Application
 
-This is a responsive, interactive Employee Directory web application built as per the AJACKUS frontend assignment specifications.  
-It demonstrates clean UI/UX, modular code, client-side data management, and validations — using **HTML, CSS, vanilla JavaScript**, and a Freemarker-like templating simulation with local data.
+This is a responsive Employee Directory web interface built using **HTML**, **CSS**, **JavaScript**, and **Freemarker templates (simulated with .html here)**.  
+It allows you to manage employees with features like Add, Edit, Delete, Search, Sort, Filter, and Pagination — all on the frontend with local data.
 
 ---
 
 ## 🚀 Features
 
-✅ **Dashboard**
-- Displays list of employees with:
-  - Employee ID, First Name, Last Name, Email, Department, Role
-- Edit and Delete buttons for each employee.
-
-✅ **Add/Edit Employee Form**
-- Add new employees or edit existing ones.
-- Auto-fills form data on edit.
-- Validates required fields and email format.
-
-✅ **Delete Employee**
-- Simple confirm dialog before deleting.
-
-✅ **Search, Filter, Sort**
-- 🔍 Search by first name, last name, or email.
-- 🔄 Sort by First Name or Department.
-- 📂 Filter by Department & Role (via popup sidebar).
-
-✅ **Pagination**
-- Choose to view 10, 25, 50, or 100 employees per page.
-
-✅ **Responsive Design**
-- Looks great on Desktop 💻, Tablet 📱, and Mobile 📲.
+- List employees with ID, Name, Email, Department, and Role.
+- **Add / Edit Employee:** Inline form with validations.
+- **Delete Employee:** With confirmation.
+- **Search:** By first name, last name, or email.
+- **Sort:** By first name or department.
+- **Filter:** By department and role using a filter sidebar/popup.
+- **Pagination:** Choose to view 10, 25, 50, or 100 employees per page.
+- Fully **responsive design** for desktop, tablet, and mobile.
 
 ---
 
 ## 📂 Project Structure
 
-   employee-directory/
-│
+employee-directory/
 ├── src/
 │ └── main/
 │ └── resources/
-│ ├── static/
-│ │ ├── css/
-│ │ │ └── style.css
-│ │ └── js/
-│ │ ├── data.js
-│ │ └── app.js
-│ └── templates/
-│ └── dashboard.html
-│
+│ ├── templates/
+│ │ └── dashboard.html # Main page rendered (simulated Freemarker)
+│ └── static/
+│ ├── css/
+│ │ └── style.css # Stylesheet for layout, buttons, etc.
+│ └── js/
+│ ├── data.js # Mock employee data
+│ └── app.js # Handles all interactivity
+├── screenshots/
+│ ├── dashboard.png
+│ ├── add-employee.png
+│ └── filter.png
 └── README.md
+
+
 ---
 
-## 🚀 How to Run
+## 📸 Screenshots
 
-No backend or build tools needed.
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Laharivanaja/employee-directory.git
-   cd employee-directory
+### 🔎 Dashboard
+![Dashboard](screenshots/dashboard.png)
 
 
+### ➕ Add/Edit Employee
+![Add/Edit Form](screenshots/add-employee.png)
+
+### 🗂 Filter Sidebar
+![Filter Sidebar](screenshots/filter.png)
+
+---
+
+## 🛠 Setup & Run
+
+> No backend required.  
+> Just open `dashboard.html` in your browser.
+
+### Or serve with Live Server
+1. Open the project folder in VS Code.
+2. Right click `dashboard.html` → `Open with Live Server`.
+
+---
+
+## 📝 Reflection
+
+### 🚧 Challenges Faced
+- Implementing combined filtering, search, and sorting with pagination while keeping performance smooth.
+- Making the form dynamic for both add & edit with inline validations.
+
+### 💡 Improvements (Future)
+- Persist data with `localStorage` or an API.
+- Add smooth animations for adding, filtering, or paginating items.
+- More robust email/field validations.
+
+---
+
+## ✅ Submission Notes
+
+- Fully meets assignment specs:
+  - Uses vanilla JS for DOM manipulation & state.
+  - Uses Freemarker-like `dashboard.html` as template.
+  - All features (Add/Edit/Delete/Search/Sort/Filter/Pagination) implemented.
+  - Completely responsive on mobile, tablet, and desktop.
+- Pushed to [GitHub](https://github.com/Laharivanaja/employee-directory).
+
+---
+
+### 🥳 Thank you for reviewing!
