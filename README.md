@@ -34,12 +34,22 @@ It demonstrates clean UI/UX, modular code, client-side data management, and vali
 ---
 
 ## 📂 Project Structure
-employee-directory/
-├── src/main/resources/templates/dashboard.html  (For Freemarker templates)
-├── src/main/resources/static/    (For CSS and JS files)
-├── README.md
 
-
+   employee-directory/
+│
+├── src/
+│ └── main/
+│ └── resources/
+│ ├── static/
+│ │ ├── css/
+│ │ │ └── style.css
+│ │ └── js/
+│ │ ├── data.js
+│ │ └── app.js
+│ └── templates/
+│ └── dashboard.html
+│
+└── README.md
 ---
 
 ## 🚀 How to Run
@@ -50,5 +60,5 @@ No backend or build tools needed.
    ```bash
    git clone https://github.com/Laharivanaja/employee-directory.git
    cd employee-directory
-2.Open dashboard.html directly in your browser.
-file:///path/to/employee-directory/dashboard.html
+
+
